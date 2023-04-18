@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <title>Generic</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="x-apple-disable-message-reformatting"> 
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    
+    <!-- Tipografia para Outlook -->
+    <!--[if mso]>
+    <style>
+        * {
+            font-family: Helvetica, sans-serif !important;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;900&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    
+
+
+    <!-- Configuracion del CSS inicio -->
+    <style>
+        
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* Los correos no cambien el tamaño del texto */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Centrado en Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* NO espacio extra en Outlook */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* NO relleno del webkit */
+        table {
+            border: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        /* Samsung Android uso del viewport. */
+        #MessageViewBody,
+        #MessageWebViewDiv{
+            width: 100% !important;
+        }
+
+        /* Render de img para IE */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* No subrayado en links */
+        a {
+            text-decoration: none;
+        }
+
+        /* Cadenas de texto predeterminadas por clientes de correo */
+        /* iOS */
+        a[x-apple-data-detectors],
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        u + #body a,        /* Gmail */
+        #MessageViewBody a  /* Samsung Mail */
+        {
+           color: inherit;
+           text-decoration: none;
+           font-size: inherit;
+           font-family: inherit;
+           font-weight: inherit;
+           line-height: inherit;
+        }
+
+        /* Gmail no cambie el color de los textos */
+        .im {
+            color: inherit !important;
+        }
+
+        /* Gmail no muestre link de descarga para img grandes  */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* Gmail no muestre link de descarga para img grandes -- si no funciona */
+        img.g-img + div {
+            display:none !important;
+        }
+
+        /* Media  */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+            
+
+
+    </style>
+    <!-- Escala para Outlook 2007-2013 -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+    <![endif]-->
+
+    <!-- Configuracion del CSS fin -->
+
+    <!-- Clases utiles para uso -->
+    <style>
+        .s-btn__primary:hover {
+            background: #0077CC !important;
+            border-color: #0077CC !important;
+        }
+        .s-btn__white:hover {
+            background: #EFF0F1 !important;
+            border-color: #EFF0F1 !important;
+        }
+        .s-btn__outlined:hover {
+            background: rgba(0,119,204,.05) !important;
+            color: #005999 !important;
+        }
+        .s-tag:hover,
+        .post-tag:hover {
+            border-color: #cee0ed !important;
+            background: #cee0ed !important;
+        }
+
+
+        @media screen and (max-width: 700px) {
+            /* Ancho completo */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* Centra */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* Facilidades para modificar los padding */
+            .sm-p-none  {padding: 0 !important;}
+            .sm-pt-none {padding-top: 0 !important;}
+            .sm-pb-none {padding-bottom: 0 !important;}
+            .sm-pr-none {padding-right: 0 !important;}
+            .sm-pl-none {padding-left: 0 !important;}
+            .sm-px-none {padding-left: 0 !important; padding-right: 0 !important;}
+            .sm-py-none {padding-top: 0 !important; padding-bottom: 0 !important;}
+
+            .sm-p   {padding: 20px !important;}
+            .sm-p-sm {padding: 10px !important;}
+            .sm-pt  {padding-top: 20px !important;}
+            .sm-pt-sm {padding-top: 10px !important;}
+            .sm-pb  {padding-bottom: 20px !important;}
+            .sm-pr  {padding-right: 20px !important;}
+            .sm-pl  {padding-left: 20px !important;}
+            .sm-px  {padding-left: 10px !important; padding-right: 10px !important;}
+            .sm-py  {padding-top: 20px !important; padding-bottom: 20px !important;}
+            .sm-mb  {margin-bottom: 20px !important;}
+            
+            .img-max {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .font-sm {
+                font-size: 10px !important;
+            }
+
+            .title-sm {
+                font-size: 16px !important;
+            }
+
+            .cta-sm {
+                width: 120px !important;
+            }
+
+            .icon-sm {
+                width: 35px !important;
+                height: 36px !important;
+            }
+
+            .logo-sm{
+                width: 75px !important;
+                height: 30px !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; background: #EFF0F1; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #EFF0F1;">
+        <!--[if mso | IE]>
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #EFF0F1;">
+        <tr>
+        <td>
+        <![endif]-->
+        <div class="email-container" style="max-width: 700px; margin: 0 auto;">
+            <!--[if mso]>
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
+            <tr>
+            <td>
+            <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 700px; width:100% mso-table-lspace:0;mso-table-rspace:0;">
+
+                <!-- Banner inicio  -->
+                
+                <tr>
+                    <td style="font-size: 0; padding: 0; margin: 0;" valing="top" align="center">
+                        <img src="https://i.postimg.cc/Y0hJXZrD/header.jpg" alt="Lorem ipsum dolor sit amet" class="img-max" style="width: 700px; height: 465px; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 22px; color: #ffffff;" width="700px" height="303px">
+                    </td>
+                </tr>
+
+                <!-- Banner final  -->
+
+                <!-- Contenedor 1 inicio-->
+                <tr>
+                    <td style="padding: 0 0px 0 0px; background-color: #ffffff;" class="font-sm">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                            
+                            <tr>
+                                <td style="font-family: Helvetica, sans-serif; font-size: 15px; line-height: 120%; color: #3d3934; text-align: left; padding: 40px 43px 44px 60px; background-color: #fefefe;" class="sm-p font-sm">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td style="font-family: Helvetica, sans-serif; font-size: 15px; line-height: 100%; color: #3d3934; text-align: left; padding: 0; margin: 0; width: 70%;" width="70%" class="sm-p-none font-sm">
+                                                
+                                                <p class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 120%; color: #3d3934; font-size: 15px;"> 
+                                                    <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</b> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  <br><br>
+                                                </p>
+                                                <p class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 120%; color: #3d3934; font-size: 15px;"> 
+                                                        
+                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+                                                        
+                                                </p>
+                                                <p class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 120%; color: #3d3934; font-size: 15px;"> 
+                                                            
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <b>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="font-family: Helvetica, sans-serif; font-size: 15px; line-height: 120%; color: #3d3934; text-align: left; padding: 0px 43px 61px 43px; background-color: #f4f4f4;" class="sm-py sm-px">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td class="sm-p-none" style="font-size: 0; padding: 60px 0 0 0; margin: 0;" valing="top" align="center">
+                                                <img class="icon-sm" src="https://i.postimg.cc/mkJKKjhL/calendar.png" width="50" height="51" alt="UV" border="0" style="display: inline-block; text-align: left; vertical-align: middle;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: Helvetica, sans-serif; font-size: 16px; line-height: 100%; color: #23135f; text-align: center; padding: 29px 0 0 0; width: 100%;" width="100%" class="sm-pt">
+                                                <p class="font-sm" style="font-family: Helvetica, sans-serif; margin: 0px; line-height: 100%; color: #23135f; font-size: 16px;">
+                                                    <b>March 3th | 12:00 PM</b>
+                                                </p>
+                                                <p class="font-sm" style="font-family: Helvetica, sans-serif; margin: 5px 0 0 0; line-height: 100%; color: #232323; font-size: 16px;">
+                                                    <b>TBD</b>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td style="padding: 28px 0px 0 0; text-align: center;" class="sm-pt">
+                            
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                            
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <!--[if mso]>
+                                                                <v:roundrect xmlns:v="urn:schemas-Microsoft-com:vml" xmlns:w="urn:schemas-Microsoft-com:office:Word" href="http://www.EXAMPLE.com/" style="height:35px;v-text-anchor:middle;width:186px;" arcsize="50%" stroke="f" fillcolor="#23135f">
+                                                                    <w:anchorlock/>
+                                                                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;">
+                                                                        Order now
+                                                                    </center>
+                                                                </v:roundrect>
+                                                                <![endif]-->
+                                                                <!--[if !mso]> <!-->
+                                                                <table cellspacing="0" cellpadding="0"> 
+                                                                    <tr>
+                                                                        <td class="cta-sm font-sm" align="center" width="186" height="35" bgcolor="#23135f" style=" color: #ffffff; display: block;">
+                                                                            <a class="font-sm" href="http://www.EXAMPLE.com/" style="color: #ffffff; font-size:16.6px; font-family: Helvetica, sans-serif; text-decoration: none; line-height:34px; width:100%; display:inline-block">
+                                                                                Confirm attendance
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <!-- <![endif]-->
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                    
+                                            </td>
+                                        </tr>
+                                    
+                                    
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <!-- Contenedor 1 final -->
+
+
+
+                <!-- Video inicio  -->
+                
+                <tr>
+                    <td style="font-size: 0; padding: 0; margin: 0;" valing="top" align="center">
+                        <a href="#">
+                            <img src="https://i.postimg.cc/zX7yx5sz/video.jpg" alt="Lorem ipsum dolor sit amet" class="img-max" style="width: 700px; height: 283px; display: block; font-family: Arial, Helvetica, sans-serif; font-size: 22px; color: #ffffff;" width="700px" height="283px">
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- Video final  -->
+
+
+                <!-- Titulo inicio  -->
+                <tr>
+                    <td style="padding: 30px; text-align: center; background-color: #ffffff;" class="sm-px title-sm">
+                        <p class="title-sm" dir="ltr" style="font-family: 'Helvetica', sans-serif; font-size: 30px; color: #23135f; text-align: center; padding: 0px; margin: 0;">
+                            <span style="color:#232323">Speaker:</span> <b>Lorem Ipsum</b> - <span style="font-weight: lighter;">Dolor sit amet</span> 
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Titulo final  -->
+
+
+                <!-- Footer inicio  -->
+
+                <tr>
+                    <td style="padding: 30px 60px 23px 50px; background-color: #7c55b5;" class="sm-p-sm font-sm">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                            <tr>
+                                <td class="font-sm" style="font-family: Helvetica, sans-serif; font-size: 15px; line-height: 100%; color: #3d3934; text-align: left; padding: 0; width: 70%;" width="70%" class="sm-py sm-px">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td>
+                                                <p class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 160%; color: #ffffff; font-size: 14px; font-weight: lighter;"> 
+                                                    MORE INFORMATION:
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 140%; color: #ffffff; font-size: 14px; font-weight: lighter;"> 
+                                                <b>Lorem ipsum</b> | Vice President
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p  class="font-sm" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 140%; color: #23135f; font-size: 14px;"> 
+                                                    <a class="font-sm"  href="mailto:consectetur@loremipsum.com" style="margin: 0; font-family: Helvetica, sans-serif; margin: 0; line-height: 140%; color: #23135f; font-size: 14px;">
+                                                        <b>consectetur@loremipsum.com</b>
+                                                    </a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                </td>
+                                <td style="font-family: Helvetica, sans-serif; font-size: 15px; line-height: 120%; color: #ffffff; text-align: left; padding: 0; background-color: #7c55b5;" class="sm-p-none">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td style="font-size: 0; padding: 0; margin: 0;" valing="top" align="right">
+                                                <img class="logo-sm" src="https://i.postimg.cc/BQyMct10/logo.png" width="103" height="35" alt="Logo Generic" border="0" style="display: inline-block; text-align: left; vertical-align: middle;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: Helvetica, sans-serif; font-size: 16px; line-height: 100%; color: #ffffff; text-align: right; padding: 10px 0 0 0; width: 100%;" width="100%" class="sm-pt-sm font-sm">
+                                                <p class="font-sm"  style="font-family: Helvetica, sans-serif; margin: 0px; line-height: 120%; color: #ffffff; font-size: 12px; font-weight: lighter;">
+                                                    Generic 2020
+                                                </p>
+                                                <p class="font-sm" style="font-family: Helvetica, sans-serif; margin: 0; line-height: 120%; color: #ffffff; font-size: 12px; font-weight: lighter;">
+                                                    All rights reserved.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Footer Final  -->
+
+            </table>
+        </div>
+    </center>
+    
+
+
+
+
+
+
+</body>
+
+</html>
